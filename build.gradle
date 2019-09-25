@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        springBootVersion = "2.0.6.RELEASE"
+    }
+    repositories {
+        maven { url "http://jcenter.bintray.com" }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+plugins {
+    id "java"
+}
+
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    mavenCentral()
+}
+bootJar {
+    baseName = 'pal-tracker'
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+}
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello1",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
