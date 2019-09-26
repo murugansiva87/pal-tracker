@@ -1,6 +1,6 @@
 package io.pivotal.pal.tracker;
-import java.time.LocalDate;
 
+import java.time.LocalDate;
 
 public class TimeEntry {
     private long id;
@@ -78,11 +78,11 @@ public class TimeEntry {
     @Override
     public String toString() {
         return "TimeEntry{" +
-                "id=" + id +
-                ", projectId=" + projectId +
-                ", userId=" + userId +
-                ", date='" + date + '\'' +
-                ", hours=" + hours +
-                '}';
+            "id=" + id +
+            ", projectId=" + projectId +
+            ", userId=" + userId +
+            ", date='" + date + '\'' +
+            ", hours=" + hours +
+            '}';
     }
 }

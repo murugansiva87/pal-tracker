@@ -1,4 +1,5 @@
 package test.pivotal.pal.trackerapi;
+
 import io.pivotal.pal.tracker.PalTrackerApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;

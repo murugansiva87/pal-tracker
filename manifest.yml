@@ -4,7 +4,7 @@ applications:
     memory: 768M
     path: build/libs/pal-tracker.jar
     routes:
-      - route: murugan-pal-tracker.cfapps.io
+      - route: pcf-pal-tracker-sit.cfapps.io
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'

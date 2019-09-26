@@ -1,6 +1,5 @@
 package test.pivotal.pal.tracker;
 
-
 import io.pivotal.pal.tracker.TimeEntry;
 import io.pivotal.pal.tracker.TimeEntryController;
 import io.pivotal.pal.tracker.TimeEntryRepository;
