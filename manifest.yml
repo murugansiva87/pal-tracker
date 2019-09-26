@@ -2,7 +2,6 @@
 applications:
   - name: pal-tracker
     memory: 768M
-    random-route: true
     path: build/libs/pal-tracker.jar
     routes:
       - route: murugan-pal-tracker.cfapps.io
