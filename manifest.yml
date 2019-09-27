@@ -6,5 +6,5 @@ applications:
     routes:
       - route: murugan-pal-tracker.cfapps.io
     env:
-      WELCOME_MESSAGE: Hello from Cloud Foundry
+      WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
