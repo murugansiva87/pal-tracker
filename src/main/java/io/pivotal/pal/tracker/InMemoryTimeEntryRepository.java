@@ -7,18 +7,18 @@ import java.util.List;
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     private HashMap<Long, TimeEntry> timeEntries = new HashMap<>();
 
-    private long currentId = 0L;
+    private long currentId = 1L;
 
     @Override
     public TimeEntry create(TimeEntry timeEntry) {
-        Long id = currentId+1;
+        Long id = currentId++;
 
         TimeEntry newTimeEntry = new TimeEntry(
-            id,
-            timeEntry.getProjectId(),
-            timeEntry.getUserId(),
-            timeEntry.getDate(),
-            timeEntry.getHours()
+                id,
+                timeEntry.getProjectId(),
+                timeEntry.getUserId(),
+                timeEntry.getDate(),
+                timeEntry.getHours()
         );
 
         timeEntries.put(id, newTimeEntry);
@@ -40,11 +40,11 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         if (find(id) == null) return null;
 
         TimeEntry updatedEntry = new TimeEntry(
-            id,
-            timeEntry.getProjectId(),
-            timeEntry.getUserId(),
-            timeEntry.getDate(),
-            timeEntry.getHours()
+                id,
+                timeEntry.getProjectId(),
+                timeEntry.getUserId(),
+                timeEntry.getDate(),
+                timeEntry.getHours()
         );
 
         timeEntries.replace(id, updatedEntry);
@@ -56,4 +56,3 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         timeEntries.remove(id);
     }
 }
-
