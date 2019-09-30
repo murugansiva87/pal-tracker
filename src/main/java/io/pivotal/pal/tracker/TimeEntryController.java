@@ -47,11 +47,11 @@ public class TimeEntryController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
+    /*
     @DeleteMapping("{id}")
     public ResponseEntity delete(@PathVariable Long id) {
         timeEntriesRepo.delete(id);
 
         return new ResponseEntity(HttpStatus.NO_CONTENT);
-    }
+    }*/
 }
