@@ -1,10 +1,10 @@
 ---
 applications:
   - name: pal-tracker
-    memory: 768M
+    memory: 512M
     path: build/libs/pal-tracker.jar
     routes:
       - route: murugan-pal-tracker.cfapps.io
     env:
       WELCOME_MESSAGE: Hello from the review environment
-      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      JBP_CONFIG_OPEN_JDK_JRE: '[jre: { version: 11.+ },memory_calculator: {stack_threads: 800, memory_sizes: {stack: 512k}}]'
